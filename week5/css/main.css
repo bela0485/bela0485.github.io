@@ -1,0 +1,72 @@
+html {
+    background-color: rgb(91, 51, 88);
+    color: white;
+    font-family: "Comic Relief", system-ui;
+    rotate: 1 1 0 60deg;
+}
+
+.center-child {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+section:hover {
+    direction: rtl
+}
+
+a  {
+    color: wheat;
+}
+
+h1 {
+    text-align: center;
+    transform: scaleX(500%);
+    border-style: groove;
+    border-color: yellow;
+    border-width: 10px;
+    width: 5em;
+    padding-bottom: 10em;
+}
+
+nav {
+    background-color: violet;
+    transition: transform 10s;
+}
+
+nav:hover {
+    transform: rotateZ(3600deg);
+}
+
+
+h1, h2, h3 {
+    text-decoration: underline;
+    text-decoration-color: yellow;
+    text-decoration-style: dotted;
+    text-decoration-thickness: 1em;
+}
+
+h1::first-letter, h2::first-letter, h3::first-letter {
+    -webkit-initial-letter: 2;
+    initial-letter: 2;
+}
+
+#aboutus {
+    background-color: midnightblue;
+}
+
+.imp-para {
+    color: red;
+    text-transform: uppercase;
+    rotate: 1 1 1 -50deg;
+    transform: scale(150%);
+}
+
+section li {
+    color: green;
+}
+
+strong {
+    font-size: 1.2em;
+    text-decoration: underline red 3px;
+}
