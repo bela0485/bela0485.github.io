@@ -1,0 +1,75 @@
+body {
+    font-family: "Lato", sans-serif;
+    font-size: 18px;
+
+    /* Not a requirement, just looks better */
+    margin: 0;
+}
+
+header, footer {
+    background-color: #6850a1;
+
+    /* Not a requirement, just needed it to be readable */
+    color: white; 
+}
+
+.site-title {
+    color: #cedfc2;
+
+    /* Remove the margin, this allows the header to be at the top with no gap */
+    margin-top: 0;
+}
+
+#my-image {
+    box-shadow: 0px 0px 2px 1px black;
+
+    /* Make the image smaller, this was moved form the HTML file */
+    width: 20em;
+}
+
+/* dont want to target the nav ul */
+article ul {
+    list-style-type: square;
+}
+
+article li:nth-child(odd) {
+    background-color: #4f4360;
+
+    /* Not a requirement, just needed it to be readable */
+    color: white;
+}
+
+/* This is needed because changing the text color of the li makes the marker the same color and it became invisible */
+article li:nth-child(odd)::marker {
+    color: black;
+} 
+
+/* only want to target the nav list */
+nav ul {
+    /* remove the bullet markers */
+    list-style-type: none;
+}
+
+nav a {
+    text-decoration: none;
+    background-color: #4f4360;
+    border: 2px solid #cedfc2;
+
+    /* needed to make visible and pretty*/
+    color: #cedfc2;
+    padding: 0.2em;
+}
+
+nav a:hover {
+    background-color: #88498b;
+}
+
+nav li {
+    /* prevent nav list items from merging into one another */
+    margin-bottom: 0.5em;
+}
+
+/* not a requirement, makes the body's children not touch the edges */
+body > *{
+    padding: 1em;
+}
