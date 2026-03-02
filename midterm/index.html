@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Lone Starfish</title>
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+
+<body>
+    <!-- Header / Banner -->
+    <header>
+        <div id="banner-container">
+            <!-- H1 has the starfish image, this is the banner -->
+            <h1>Lone Starfish</h1>
+            <!-- decorative banner image -->
+            <img src="./images/lone-starfish-wide.jpg" alt="">
+        </div>
+
+        <!-- Nav links that point to diff parts of the same page -->
+        <nav>
+
+            <!-- ul, because the order does not matter -->
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">Story</a></li>
+                <li><a href="">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main content of the page -->
+    <main>
+        <!-- Life of a starfish article -->
+        <article>
+            <h2 id="life-of-starfish">Life of a Starfish</h2>
+
+            <!-- unsure if this image is decorative because the context is random text -->
+            <!-- I imagine that in a real scenario, the article would mention this image so i added a description -->
+            <img src="./images/lone-starfish.jpg" alt="Orange starfish with darker spikes all over">
+
+            <p>
+                Swallower catla Black angelfish grunter striped bass scissor-tail rasbora; slender mola. Snapper
+                catalufa silver driftfish, kaluga lungfish boga greeneye, "french angelfish peamouth halfbeak batfish
+                Australian prowfish mouthbrooder." Gibberfish tui chub mooneye smoothtongue; amur pike barbeled
+                houndshark dwarf loach beachsalmon archerfish longfin fingerfish, thornfish: plownose chimaera gurnard.
+                Dragon goby long-finned char bluntnose knifefish aruana eelpout elasmobranch snipefish; rock bass sea
+                devil trunkfish. Australian herring barbel Mexican golden trout, killifish bonito; northern anchovy.
+                Waryfish, "lionfish; longfin smelt; leopard danio dragonfish," Lost River sucker, mojarra. Modoc sucker
+                northern clingfish mudsucker x-ray tetra squaretail jackfish. Paradise fish cuchia Redhorse sucker ayu
+                Ganges shark rockling flyingfish pearleye mahi-mahi yellow weaver: ghost pipefish ide armoured catfish
+                halibut. Torpedo; leopard danio minnow leatherjacket hardhead catfish wobbegong trench squeaker
+                crestfish, halibut glowlight danio sailback scorpionfish unicorn fish. Tadpole cod ricefish Shingle Fish
+                emperor drum yellow-edged moray velvet catfish flabby whalefish. Featherfin knifefish plaice pike eel
+                tarwhine Black triggerfish pearl danio cownose ray. Merluccid hake, platy peamouth
+                humuhumunukunukuapua'a barred danio. Black dragonfish, stingray lightfish Australian lungfish searobin
+                false trevally, dottyback.
+            </p>
+        </article>
+
+        <!-- section for facts about starfish -->
+        <!-- this is a section because it does not have enough info to make it an article -->
+        <!-- this is not in the article because it is not related to the LIFE of a starfish, just starfish in general -->
+        <section>
+            <h2>Facts About Starfish</h2>
+            <ul>
+                <li>Australian herring barbel Mexican golden trout, killifish bonito; northern anchovy. </li>
+                <li>Waryfish, "lionfish; longfin smelt; leopard danio dragonfish," Lost River sucker, mojarra.</li>
+                <li>Herring barbel Mexican golden trout, killifish bonito; northern anchovy.</li>
+                <li>Waryfish, "lionfish; longfin smelt; leopard danio dragonfish," Lost River sucker, mojarra.</li>
+            </ul>
+        </section>
+
+        <!-- Contact Forum section -->
+        <section>
+            <!-- TODO: this may need to be a forum title instead -->
+            <h2>Contact to learn more</h2>
+
+            <form action="">
+                <!-- name input and label -->
+                <label for="name">Your Name</label>
+                <input type="text" id="name">
+                
+                <!-- email input and label -->
+                <label for="email">Your Email</label>
+                <input type="text" id="email">
+
+                <!-- Message text area and label -->
+                <label for="message">Your Message</label>
+                <textarea name="message" id="message" rows="5"></textarea>
+
+                <!-- Visit starfish -->
+                <!-- fieldset so that the main label can be associated with the smaller ones, an h3 will not be clear to screen reader users -->
+                <fieldset>
+                    <legend>Would you like to visit the starfish?</legend>
+
+                    <!-- yes radio -->
+                    <label for="yes">Yes</label>
+                    <input type="radio" id="yes" name="visit" value="Yes">
+
+                    <!-- no radio -->
+                    <label for="no">No</label>
+                    <input type="radio" id="no" name="visit" value="No">
+
+                    <!-- no maybe -->
+                    <label for="maybe">Maybe</label>
+                    <input type="radio" id="maybe" name="visit" value="Maybe">
+                </fieldset>
+
+                <button type="submit">SEND</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- Footer with copy right -->
+    <footer>
+        &copy; Lone Starfish.
+    </footer>
+</body>
+
+</html>

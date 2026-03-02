@@ -1,0 +1,259 @@
+/* CSS RESET */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* START OF CUSTOM CSS */
+
+/* applied on the entire document */
+html {
+    /* background color on the side of the body */
+    background-color: #aad4cf;
+
+    /* change the font */
+    font-family: sans-serif;
+    font-size: 16px;
+}
+
+body {
+    /* center the body of the html */
+    margin: 0 auto;
+
+    /* reduce the width of the body, this allows the centering to work */
+    max-width: 1000px;
+
+    /* set the color for the background */
+    background-color: #d4e9e7;
+}
+
+/* this is needed so that the h1 can be positioned relative to the banner instead of the entire HTML doc */
+#banner-container {
+    position: relative;
+}
+
+h1 {
+    /* Change the font */
+    color: white;
+    font-size: 4rem;
+
+    /* Align the text */
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    bottom: 22%;
+}
+header img {    
+    /* crop the image so that the starfish is in the center no matter the view port size */
+    width: 100%;
+    object-fit: cover;
+}
+
+/* style the first h2, for some reason it looks slightly bigger to me */
+h2#life-of-starfish {
+    font-size: 2rem;
+}
+
+/* style all other h2's, for some reason they look a little smaller */
+h2 {
+    font-size: 1.7rem;
+    margin: 2rem 0 0.8rem 0.5rem;
+}
+
+
+/* Nav bar style */
+
+/* Nav bar list items (nav links) styles */
+nav li {
+    /* put list items horizontally */
+    display: inline-block;
+
+    /* center the text */
+    text-align: center;
+
+    /* spread the elements, # needs to change depending on # of items */
+    width: 32%;
+
+    /* style the text */
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    padding: 0.5rem 0;
+
+    /* add a super small gap on top of the nav items, this is needed so that the borders are not touching the banner */
+    margin-top: 4px;
+
+    /* Add the line between the list items */
+    border-right: 1px solid black; 
+}
+
+/* Remove the right border from the last item in the list */
+nav li:last-child {
+  border-right: none;
+}
+
+/* normal links */
+a {
+    /* remove the underline */
+    text-decoration: none;
+}
+
+/* visited link */
+a:visited {
+    /* remove the purple form clicked links */
+    color: black;
+}
+
+
+/* Article styling */
+
+article img {
+    width: 23%;
+    margin: 0 1.2rem 1.5rem 0.5rem;
+    float: left;
+}
+
+p {
+    /* for some reason, the font looks most accurate to the reference with .95rem */
+    font-size: 0.95rem;
+    line-height: 1.5em;
+    margin: 0 1rem;
+}
+
+
+/* Facts style */
+
+/* style the bullets in the list */
+section li {
+    margin-left: 0.5rem;
+    list-style-type: disc;
+    list-style-position: inside;
+}
+
+
+/* Form styling */
+
+/* Add border and spacing */
+form {
+    border: 1px solid;
+    margin: 0 0.5rem;
+    padding: 0.7rem;
+}
+
+/* Make children blocks */
+form > label, form > input, form > textarea{
+    display: block;
+
+    /* make the boxes take up the most space possible */
+    width: 99%;
+
+    /* spacing between the elements */
+    margin-top: 0.5rem;
+}
+
+textarea {
+    /* remove the resize thing that you can drag */
+    resize: none;
+
+    /* change the color of the border to be softer */
+    border: 1px solid #9e9e9e;
+}
+
+input[type=text] {
+    /* make text inputs slightly bigger */
+    height: 1.5rem;
+
+    /* change the color of the border to be softer */
+    border: 1px solid #9e9e9e;
+}
+
+/* add more spacing on the form labels (and fieldset) */
+label, fieldset {
+    /* Needs "important" because the margin is set before on form children */
+    margin-top: 1rem !important; 
+}
+
+/* change the font size on the "Would you like to visit the starfish?" */
+legend {
+    font-size: 1.2rem;
+}
+
+/* spacing on radio btns */
+fieldset input {
+    margin: 1rem 0.2rem;
+}
+
+/* submit button style */
+form button {
+    /* change the color to the same as the BG so that it looks transparent */
+    background-color: #d4e9e7;
+
+    /* style the border */
+    border: 1px black solid;
+
+    /* change the spacing */
+    padding: 0.6rem;
+
+    /* change the cursor to look like the element is clickable on hover */
+    cursor: pointer;
+
+    /* make the text slightly smaller */
+    font-size: 0.6rem;
+}
+
+
+/* Footer styles */
+
+footer {
+    /* move the text */
+    text-align: right;
+
+    /* add spacing */
+    padding: 2rem;
+
+    /* add a little bit of spacing to show the outside of the body */
+    margin-bottom: 1rem;
+}
