@@ -87,7 +87,8 @@ h1 {
     position: absolute;
     bottom: 22%;
 }
-header img {    
+
+header img {
     /* crop the image so that the starfish is in the center no matter the view port size */
     width: 100%;
     object-fit: cover;
@@ -127,16 +128,18 @@ nav li {
     margin-top: 4px;
 
     /* Add the line between the list items */
-    border-right: 1px solid black; 
+    border-right: 1px solid black;
 }
 
 /* Remove the right border from the last item in the list */
 nav li:last-child {
-  border-right: none;
+    border-right: none;
 }
 
 /* normal links */
 a {
+    color: black;
+
     /* remove the underline */
     text-decoration: none;
 }
@@ -184,7 +187,9 @@ form {
 }
 
 /* Make children blocks */
-form > label, form > input, form > textarea{
+form>label,
+form>input,
+form>textarea {
     display: block;
 
     /* make the boxes take up the most space possible */
@@ -211,9 +216,10 @@ input[type=text] {
 }
 
 /* add more spacing on the form labels (and fieldset) */
-label, fieldset {
+label,
+fieldset {
     /* Needs "important" because the margin is set before on form children */
-    margin-top: 1rem !important; 
+    margin-top: 1rem !important;
 }
 
 /* change the font size on the "Would you like to visit the starfish?" */
@@ -242,6 +248,8 @@ form button {
 
     /* make the text slightly smaller */
     font-size: 0.6rem;
+
+    text-transform: uppercase;
 }
 
 

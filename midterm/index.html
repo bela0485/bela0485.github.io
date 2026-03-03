@@ -12,8 +12,7 @@
     <!-- Header / Banner -->
     <header>
         <div id="banner-container">
-            <!-- H1 has the starfish image, this is the banner -->
-            <h1>Lone Starfish</h1>
+            <h1 id="lone-starfish">Lone Starfish</h1>
             <!-- decorative banner image -->
             <img src="./images/lone-starfish-wide.jpg" alt="">
         </div>
@@ -23,9 +22,9 @@
 
             <!-- ul, because the order does not matter -->
             <ul>
-                <li><a href="">Home</a></li>
-                <li><a href="">Story</a></li>
-                <li><a href="">Contact</a></li>
+                <li><a href="#lone-starfish">Home</a></li>
+                <li><a href="#life-of-starfish">Story</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
@@ -64,6 +63,8 @@
         <!-- this is not in the article because it is not related to the LIFE of a starfish, just starfish in general -->
         <section>
             <h2>Facts About Starfish</h2>
+
+            <!-- ul because the order does not matter -->
             <ul>
                 <li>Australian herring barbel Mexican golden trout, killifish bonito; northern anchovy. </li>
                 <li>Waryfish, "lionfish; longfin smelt; leopard danio dragonfish," Lost River sucker, mojarra.</li>
@@ -74,14 +75,13 @@
 
         <!-- Contact Forum section -->
         <section>
-            <!-- TODO: this may need to be a forum title instead -->
-            <h2>Contact to learn more</h2>
+            <h2 id="contact">Contact to learn more</h2>
 
             <form action="">
                 <!-- name input and label -->
                 <label for="name">Your Name</label>
                 <input type="text" id="name">
-                
+
                 <!-- email input and label -->
                 <label for="email">Your Email</label>
                 <input type="text" id="email">
@@ -91,7 +91,7 @@
                 <textarea name="message" id="message" rows="5"></textarea>
 
                 <!-- Visit starfish -->
-                <!-- fieldset so that the main label can be associated with the smaller ones, an h3 will not be clear to screen reader users -->
+                <!-- fieldset so that the main label (legend) can be associated with the smaller fields and so that all radio buttons can be read together, an h3 will not be clear to screen reader users -->
                 <fieldset>
                     <legend>Would you like to visit the starfish?</legend>
 
@@ -108,7 +108,8 @@
                     <input type="radio" id="maybe" name="visit" value="Maybe">
                 </fieldset>
 
-                <button type="submit">SEND</button>
+                <!-- the word send is not in all caps to help screen reader users read it better -->
+                <button type="submit">Send</button>
             </form>
         </section>
     </main>
