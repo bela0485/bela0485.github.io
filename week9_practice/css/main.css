@@ -1,0 +1,54 @@
+html {
+    font-family: 14px;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2.5rem;
+}
+
+.bigger_viewport {
+    display: none;
+}
+
+img {
+    width: 100%;
+}
+
+body {
+    padding: 0 1rem;
+}
+
+.learn {
+    background-color: green;
+    color: white;
+    padding: 1rem;
+}
+
+iframe {
+    width: 100%;
+}
+
+@media screen and (min-width: 700px) {
+    html {
+        font-size: 16px;
+    }
+    .bigger_viewport {
+        display: block;
+    }
+    .small_viewport {
+        display: none;
+    }
+    .banner {
+        position: relative;
+    }
+    .banner_content {
+        position: absolute;
+        top: 40%;
+        color: white;
+        text-align: center;
+    }
+}
