@@ -542,3 +542,231 @@ footer a {
 /* desktop / tablet style */
 /* Add a min-width media query for the screen size of 760px and above */
 /* maxwidth The maximum width of the container is 1200px */
+
+@media screen and (min-width: 760px) {
+    /* nav bar styles */
+    .header-banner {
+        background-color: #222;
+    }
+    nav {
+        flex-direction: row;
+        justify-content: space-around;
+        width: 100%;
+    }
+    nav ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        width: 100%;
+    }
+    
+    /* style the home link and container */
+    nav ul li:nth-child(1) {
+        /* remove the padding from the mobile site */
+        padding-top: 1rem;
+    }
+
+    /* style the search bar */
+    search {
+        align-items: center;
+    }
+    search input {
+        height: 2rem;
+    }
+    /* style the search icon*/
+    search .material-symbols-outlined {
+        /* font size = height - border size */
+        font-size: calc(2rem - 2px); 
+        font-variation-settings:
+            'FILL' 1,
+            'wght' 500,
+            'GRAD' 0,
+            'opsz' 48
+    }
+
+    /* apply a max width to the header items */
+    .maxwidth-header {
+        max-width: 1200px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        margin: 0 auto;
+    }
+
+    /* put the section the same size as the image to remove any gaps */
+    #home-section {
+        height: 50rem;
+    }
+    /* resize the home image */
+    #home-section img {
+        width: 100vw;
+        height: 50rem;
+        position: relative;
+        object-fit: cover;
+    }
+
+    /* resize the content to be above the image */
+    .move-above-last-image {
+        /* max width = maxwidth - padding */
+        max-width: calc(1200px - 2rem - 1rem);
+        position: absolute;
+        height: 30rem;
+
+        /* put in the middle of the image */
+        /* take the image size (50rem) and subtract the height of the content (30rem) plus the padding (2rem), all split in half */
+        top: calc((50rem - ((30rem + 2rem) / 2))  / 2);
+
+        /* center hack taken from https://stackoverflow.com/questions/1776915/how-can-i-center-an-absolutely-positioned-element-in-a-div */
+        left: 0; 
+        right: 0; 
+        margin-inline: auto; 
+    }   
+
+    /* make the h1 a little bigger */
+    .move-above-last-image h1 {
+        font-size: 5rem;
+    }
+
+    /* style the about us section */
+    #about-us-section {
+        /* width = 100% minus the padding */
+        width: calc(100% - 2rem);
+
+        /* center the content */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* resize the image */
+    #about-us-section img {
+        margin-right: 1rem;
+        width: 40rem;
+    }
+
+    /* remove the margin on the h2 so that its higher */
+    #about-us-section h2 {
+        margin-top: 0px;
+    }
+
+    /* arrange the about us content and set the maxwidth */
+    #about-us-section .max-width {
+        display: flex;
+        flex-direction: row;
+        max-width: 1200px;
+    }
+
+    /* style the services section */
+    #our-services-section {
+        max-width: 1200px;
+
+        /* need 6 cols because 2x3 = 6 */ 
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: 5rem repeat(2, 1fr);
+
+        grid-template-areas: 
+            "header header header header header header" 
+            "transformation transformation transformation marketing marketing marketing" 
+            "production production development development print print" ;
+    }
+
+    /* name the grid items for the grid area */
+    #our-services-section h2{
+        grid-area: header;
+    }
+    #our-services-section div:nth-child(2) {
+        grid-area: transformation;
+    }
+    #our-services-section div:nth-child(3) {
+        grid-area: marketing;
+    }
+    #our-services-section div:nth-child(4) {
+        grid-area: production;
+    }
+    #our-services-section div:nth-child(5) {
+        grid-area: development;
+    }
+    #our-services-section div:nth-child(6) {
+        grid-area: print;
+    }
+
+    /* style the vision section */
+    /* change the max width */
+    #our-vision-section .move-above-last-image {
+        max-width: 1200px;
+    }
+
+    /* style the team grid */
+    #our-team-section {
+        max-width: 1200px;
+
+        grid-template-columns: 1fr 1fr;
+
+        /* first row is 6rem because its the h2, its needs diff amount of space */
+        grid-template-rows: 6rem 1fr 1fr;
+    }
+
+    /* make the header take the entire first row */
+    #our-team-section h2{
+        grid-column: 1 / 3;
+    }
+    
+    .team-desc {
+        /* remove the bottom margin */
+        margin-bottom: 0px;
+    }
+
+    /* move the last team member's desc to the other side */
+    #our-team-section img:nth-child(4){
+        grid-column: 2 / 3;
+        grid-row: 3 / 4;
+    }
+    #our-team-section div:nth-child(5){
+        grid-column: 1 / 2;
+    }
+
+    /* style the contact us grid */
+    #contact-us-section {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 6rem 1fr 15rem;
+        gap: 1rem;
+    }
+
+    /* set the contact us grid elements */
+    #contact-us-section h2:nth-child(1){
+        grid-column: 1 / 3;
+    }
+    #contact-us-section div:nth-child(2){
+        grid-column: 1 / 2;
+    }
+    #contact-us-section div:nth-child(3){
+        grid-column: 1 / 3;
+    }
+    #contact-us-section div:nth-child(4){
+        grid-column: 2 / 3;
+        grid-row: 2 / 3;
+    }
+
+    /* style the headers in the contact section */
+    #contact-us-section h3 {
+        margin-left: 0.1rem;
+        margin-bottom: 0.5rem;
+    }
+
+    /* the inputs and text areas are oversized */
+    input, textarea {
+        width: 99%;
+    }
+
+    /* apply the max width to the footer content */
+    footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    footer div {
+        max-width: 1200px;
+        width: 100%;
+    }
+}
