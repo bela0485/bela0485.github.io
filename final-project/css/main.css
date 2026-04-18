@@ -1,0 +1,544 @@
+/* CSS RESET */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* Start of Custom CSS code */
+
+/* mobile first design */
+
+/* set the font for the entire doc */
+body {
+    font-family: "Open Sans", sans-serif;
+    line-height: 1.5rem;
+}
+
+header {
+    background-color: #222;
+}
+
+.maxwidth-header {
+    padding: 1rem;
+}
+
+.header-banner {
+    background-color: #c78c06;
+}
+
+/* move the nav items to the center */
+nav {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+/* style the links */
+nav ul li a {
+    color: #c78c06;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+
+/* add spacing between the nav links */
+nav ul li {
+    padding: 1rem;
+    text-align: center;
+}
+
+/* style the home link and container */
+nav ul li:nth-child(1) {
+    background-color: #c78c06;
+    padding-top: 3rem;
+}
+nav ul li:nth-child(1) a {
+    color: #222;
+}
+
+/* style the search bar */
+/* use the search element as a container */
+search {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+/* style the search input */
+search input {
+    width: 100%;
+    height: 2rem;
+}
+
+/* style the search btn */
+search button {
+    background-color: #222;
+    color: #c78c06;
+    border: solid 1px #c78c06;
+}
+
+/* make the entire main a flexbox to center the elements that have max width */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Style the home section */
+/* style the home bg image */
+#home-section img {
+    max-width: 100%;
+    height: 38rem;
+    position: relative;
+    object-fit: cover;
+}
+
+/* put the section the same size as the image to remove any gaps */
+#home-section {
+    height: 38rem;
+}
+
+/* style the home content container */
+.transparent-black-bg {
+    background-color: #222222b5;
+    color: white;
+    padding: 3rem 2rem 1rem 1rem;
+}
+
+/* style the H1 */
+h1 {
+    font-size: 4.2rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    line-height: 1.5em;
+}
+
+/* style the orange button */
+#home-section button {
+    background-color: #c78c06;
+    color: #222;
+    border: none;
+    font-size: 1.5rem;
+    padding: 1.5rem 1rem 1.5rem 2rem;
+    text-align: center;
+    margin-top: 1rem;
+
+    /* center the elements using flex */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+/* style the arrow icon, needs to #home-section selector to avoid styling the other icons */
+#home-section .material-symbols-outlined {
+    font-size: 4rem;
+    font-variation-settings:
+        'FILL' 1,
+        'wght' 900,
+        'GRAD' 0,
+        'opsz' 48
+}
+
+/* move the content above the image */
+/* 34rem = image size (38rem) - 4rem */
+.move-above-last-image {
+    position: absolute;
+    top: 34rem;
+}
+
+/* style the about us section */
+#about-us-section {
+    background-color: #ffe6ac;
+    padding: 1rem;
+}
+
+/* reduce the size of the images in the service section */
+#about-us-section img {
+    max-width: 100%;
+}
+
+/* style the H2 */
+h2 {
+    font-size: 3.2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    line-height: 1.5em;
+}
+
+/* add separation to the p */
+#about-us-section p {
+    margin-bottom: 1rem;
+}
+
+/* put the services in a 1 column grid and center them */
+#our-services-section {
+    max-width: 95%;
+    display: grid;
+    grid-template-columns: 1fr;
+    place-content: center;
+    gap: 1rem;
+}
+
+/* style the class for the services */
+.services {
+    background-color: #ffe6ac;
+}
+
+/* reduce the size of the images */
+.services img {
+    width: 100%;
+}
+
+/* padding the service content */
+.service-content {
+    padding: 1rem;
+}
+
+/* service headers styles */
+h3 {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+/* style the service button */
+#our-services-section button {
+    background-color: #222;
+    color: white;
+    border: none;
+    font-size: 1.5rem;
+    padding: 1.5rem 1rem 1.5rem 2rem;
+    text-align: center;
+    margin-top: 1rem;
+
+    /* center the elements using flex */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+
+/* style the arrow icon, needs to #id selector to avoid styling the other icons */
+#our-services-section .material-symbols-outlined {
+    font-size: 4rem;
+    font-variation-settings:
+        'FILL' 1,
+        'wght' 900,
+        'GRAD' 0,
+        'opsz' 48
+}
+
+/* style the vision section */
+#our-vision-section {
+    margin-top: 1.5rem;
+    position: relative;
+    width: 100%;
+    color: white;
+}
+
+/* reduce the image size */
+#our-vision-section img {
+    width: 100%;
+    height: 18rem;
+    object-fit: cover;
+}
+
+ /* Move the content over the image */
+#our-vision-section .move-above-last-image {
+    top: 0px;
+    padding: 1rem;
+}
+
+/* for some reason, this h2 is smaller and more bold??????? */
+#our-vision-section h2 {
+    font-size: 2rem;
+    font-weight: 750;
+}
+
+/* style the vision btn */
+#our-vision-section button {
+    /* add b0 to the color to make it transparent */
+    background-color: #222222b0;
+    border: 1px solid #c78c06;
+    color: white;
+    font-size: 1.5rem;
+    padding: 1rem 1rem 1.5rem 2rem;
+    text-align: center;
+    margin-top: 1rem;
+
+    /* center the elements using flex */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+/* style the arrow icon, needs to #id selector to avoid styling the other icons */
+#our-vision-section .material-symbols-outlined {
+    font-size: 3rem;
+    font-variation-settings:
+        'FILL' 1,
+        'wght' 500,
+        'GRAD' 0,
+        'opsz' 48
+}
+
+/* our team section */
+
+/* put the services in a 1 column grid and center them */
+#our-team-section {
+    max-width: 95%;
+    display: grid;
+    grid-template-columns: 1fr;
+    place-content: center;
+}
+
+/* style team images */
+#our-team-section img {
+    width: 100%;
+}
+
+/* style the team descriptions and description*/
+.team-desc {
+    background-color: #ffe6ac;
+    margin-bottom: 1rem;
+    padding: 1rem;
+}
+.team-title {
+    font-weight: 700;
+    width: 100%;
+    border-bottom: 3px solid #c78c06;
+}
+
+/* the h3 needs a bit of spacing on the bottom */
+#our-team-section h3 {
+    padding-bottom: 0.2rem;
+}
+
+/* style the team desc content */
+#our-team-section p {
+    font-size: 0.9rem;
+    line-height: 1.2rem;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+
+/* style the contact section */
+#contact-us-section {
+    max-width: 95%;
+    display: grid;
+    grid-template-columns: 1fr;
+    place-content: center;
+}
+
+/* style the contact form */
+/* make every element take a new line */
+form > * {
+    display: block;;
+}
+
+/* make the inputs take the entire width and make them bigger */
+input {
+    width: 100%;
+    height: 1.5rem;
+}
+
+/* textarea takes entire width and disable the resize, the height is set in the html attributes */
+textarea {
+    width: 100%;
+    resize: none;
+}
+
+/* spacing */
+label {
+    margin-top: 1rem;
+}
+#contact-us-section h3 {
+    padding-bottom: 0.5rem;
+}
+
+/* send btn style */
+#contact-us-section button {
+    background-color: #222;
+    color: #c78c06;
+    border: none;
+    font-size: 1.4rem;
+    margin-top: 1rem;
+    padding: 0.3rem;
+}
+
+/* style the time table */
+/* color the headers */
+thead {
+    background-color: #ffe6ac;
+}
+
+/* add the borders */
+table, th, td {
+  border: 1px solid;
+}
+
+/* add the padding */
+th, td {
+    padding: 0.8rem;
+}
+
+/* table sizing */
+table {
+    width: 100%;
+}
+thead th:nth-child(1) {
+    width: 70%;
+}
+thead th:nth-child(2) {
+    width: 30%;
+}
+
+/* style the footer */
+footer {
+    background-color: #222;
+    color: #c78c06;
+    padding: 1rem;
+}
+footer p {
+    padding-top: 1rem;
+}
+footer a {
+    color: #c78c06;
+}
+
+/* desktop / tablet style */
+/* Add a min-width media query for the screen size of 760px and above */
+/* maxwidth The maximum width of the container is 1200px */
